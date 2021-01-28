@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  app:
+    container_name: app-semexe 
+    image: mattrayner/lamp:latest-1804
+    ports:
+      - 80:80
+    volumes:
+      - ./app:/app
+      - ./mysql:/var/lib/mysql
+    
