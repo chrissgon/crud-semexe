@@ -23,13 +23,13 @@ Navegue para a pasta raiz do projeto e execute o comando `docker-compose up -d`.
 
 App: http://localhost/
 <br>
-MyAdmin: http://localhost/phpmyadmin/
+phpMyAdmin: http://localhost/phpmyadmin/
 
 ## Banco de dados
 
 O Mysql está hospedado na porta `3306`.
 <br>
-Para acessar o banco através do MyAdmin é necessário os dados:
+Para acessar o banco através do phpMyAdmin é necessário os dados:
 
 Usuario: **admin**
 <br>
