@@ -1,1 +1,62 @@
 @import url("./reset.css");
+
+/* GLOBALS */
+.my-container {
+    width: 100%;
+    display: flex;
+    padding: 50px;
+}
+
+/* CRUD */
+.crud {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--white);
+}
+
+/* search */
+.crud .search {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--blueDark);
+    padding-bottom: 100px;
+}
+
+.crud .search .title{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+.crud .search .form{
+    width: 100%;
+    margin-top: 25px;
+}
+
+/* results */
+.results{
+    display: block;
+    transform: translateY(-75px);
+    padding: 0 10px;
+}
+
+.results .card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px 0 25px;
+}
+
+.results .card-footer{
+    padding: 15px 25px 15px 25px;
+}
+
+/* MODALS */
+.modal .modal-header, .modal .modal-footer{
+    border: none;
+}
