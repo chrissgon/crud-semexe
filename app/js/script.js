@@ -24,29 +24,6 @@ const getPersons = () => {
     });
 };
 
-// FILTER
-const filterPerson = () => {
-  filter = $("#formFilter").serialize();
-
-  if (filter != "") {
-    $.get(base + "FilterPersons.php", filter)
-      .done((json) => {
-        const persons = JSON.parse(json);
-
-        fillTable(persons);
-      })
-      .fail(() => {
-        alertError("Ocorreu um erro ao filtrar sua lista de contatos");
-      });
-  } else {
-    getPersons();
-  }
-};
-
-$("#search").keyup(function () {
-  filterPerson();
-});
-
 const fillTable = (data) => {
   $(".table-body").html("");
   $("#records").html(data.records);
@@ -94,6 +71,29 @@ const fillTable = (data) => {
     `);
   }
 };
+
+// FILTER
+const filterPerson = () => {
+  filter = $("#formFilter").serialize();
+
+  if (filter != "") {
+    $.get(base + "FilterPersons.php", filter)
+      .done((json) => {
+        const persons = JSON.parse(json);
+
+        fillTable(persons);
+      })
+      .fail(() => {
+        alertError("Ocorreu um erro ao filtrar sua lista de contatos");
+      });
+  } else {
+    getPersons();
+  }
+};
+
+$("#search").keyup(function () {
+  filterPerson();
+});
 
 // SUBMIT
 $("#formPerson").submit(function (e) {
