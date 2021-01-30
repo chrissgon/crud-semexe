@@ -49,7 +49,7 @@ $("#search").keyup(function () {
 
 const fillTable = (data) => {
   $(".table-body").html("");
-  $("#records").html(data.persons.length);
+  $("#records").html(data.records);
 
   data.persons.forEach((person) => {
     $(".table-body").append(`
@@ -83,6 +83,16 @@ const fillTable = (data) => {
       </tr>
       `);
   });
+
+  if (data.records == 0) {
+    $(".table-body").append(`
+      <tr>
+        <td align="center" colspan="11">
+          Nenhum contato cadastrado
+        </td>
+      </tr>
+    `);
+  }
 };
 
 // SUBMIT

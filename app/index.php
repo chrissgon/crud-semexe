@@ -89,6 +89,7 @@
                         </thead>
                         <!-- body -->
                         <tbody class="table-body text-white">
+                        
                         </tbody>
                     </table>
                 </article>
