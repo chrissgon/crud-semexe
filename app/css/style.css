@@ -7,13 +7,91 @@
     padding: 50px;
 }
 
+input, select {
+    border-color: var(--blue) !important;
+}
+
+*::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #e5e5e5;
+    background-clip: padding-box;
+    border: 5px solid rgba(0, 0, 0, 0);
+}
+
+/* ALERTS */
+.alerts{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50px;
+    cursor: pointer;
+    z-index: -1;
+
+    transition: .2s all;
+}
+
+.alerts.show{
+    z-index: 9999!important;
+}
+
+.alerts .alert{
+    position: absolute;
+    top: 0;
+    background: var(--blueDark)!important;
+    max-width: 600px;
+    border: 1px solid rgba(0,0,0,.125);
+    margin-bottom: 0;
+}
+
+.alerts .alert i:nth-child(1){
+    font-size: 20px;
+    
+}
+
+.alerts .alert p{
+    display: inline;
+    line-height: 0;
+    margin: 0 20px 0 10px;
+}
+
+.alerts .btn-close{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    padding: 0!important;
+    line-height: 0;
+}
+
+.alerts .alert .btn-close i{
+    font-size: 35px;
+}
+
+/* alert error */
+#alertError .btn-close i{
+    color: var(--bs-danger);
+}
+
+/* alert success */
+#alertSuccess .btn-close i{
+    color: var(--bs-success);
+}
+
 /* CRUD */
 .crud {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: var(--white);
+    background: var(--blueDark);
 }
 
 /* search */
@@ -22,20 +100,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--blueDark);
     padding-bottom: 100px;
 }
 
-.crud .search .title{
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin: 0;
-}
-
-
 .crud .search .form{
     width: 100%;
-    margin-top: 25px;
 }
 
 /* results */
@@ -45,15 +114,37 @@
     padding: 0 10px;
 }
 
+/* header */
 .results .card-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 25px 0 25px;
 }
 
+.results .card-header .card-subtitle{
+    margin: 0!important;
+}
+
+/* body */
+.results .card-body .actions{
+    display: flex;
+}
+
+.results .card-body td{
+    min-width: 200px;
+}
+
+.results .card-body .actions :first-child{
+    margin-right: 5px;
+}
+
+/* footer */
 .results .card-footer{
     padding: 15px 25px 15px 25px;
+}
+
+.results .card-footer p{
+    margin: 0;
 }
 
 /* MODALS */

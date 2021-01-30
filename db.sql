@@ -1,4 +1,4 @@
-CREATE TABLE `semexe`.`Person` ( 
+CREATE TABLE `semexe`.`Persons` ( 
     `PersonID` INT NOT NULL AUTO_INCREMENT ,
     `Name` VARCHAR(150) NOT NULL ,
     `CPF` CHAR(14) NOT NULL ,
@@ -12,3 +12,5 @@ CREATE TABLE `semexe`.`Person` (
     `State` CHAR(2) NOT NULL ,
     PRIMARY KEY (`PersonID`)
 ) ENGINE = InnoDB;
+
+INSERT INTO `Persons` (`PersonID`, `Name`, `CPF`, `Email`, `Phone`, `Zipcode`, `Address`, `Number`, `Complement`, `City`, `State`) VALUES (NULL, 'a', 'a', 'a', 'a', 'a', 'a', '1', 'a', 'a', 'a')

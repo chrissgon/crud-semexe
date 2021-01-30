@@ -6,19 +6,20 @@
 
 html,
 body {
-    width: 100%;
+    min-width: 100%;
     position: relative;
     overflow-x: hidden;
-    background: var(--white);
+    background: var(--blueDark);
 }
 
-input{
-    border-color: var(--blueDark)!important;
+.no-scroll {
+    overflow: hidden;
 }
 
 
 /* VARS */
 :root {
     --white: #f2f2f2;
-    --blueDark: #33394f;
+    --blue: #33394f;
+    --blueDark: #252a3a;
 }
